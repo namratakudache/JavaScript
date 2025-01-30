@@ -28,13 +28,14 @@ listContainer.addEventListener(
   },
   false
 );
+//After refresh the datadoent persits if not stored in storage
 function saveData() {
   localStorage.setItem("data", listContainer.innerHTML);
 }
 function showTask() {
-    let savedData = localStorage.getItem("data");
-    if (savedData) {
-      listContainer.innerHTML = savedData;
-    }
+  let savedData = localStorage.getItem("data");
+  if (savedData) {
+    listContainer.innerHTML = savedData;
+  }
 }
 showTask();
